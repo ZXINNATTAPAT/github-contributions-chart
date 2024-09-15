@@ -14,7 +14,6 @@ const App = () => {
   const inputRef = useRef();
   const canvasRef = useRef();
   const contentRef = useRef();
-  const [loading, setLoading] = useState(false);
   const [username] = useState("ZXINNATTAPAT");
   const [theme] = useState("githubDark");
   const [data, setData] = useState(null);
@@ -65,7 +64,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div >
         <ThemeSelector currentTheme={theme}/>
         {_renderGraphs()}
     </div>
