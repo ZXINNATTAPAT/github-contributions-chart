@@ -32,25 +32,8 @@ const Preview = ({ themeName }) => (
 );
 
 const ThemeSelector = ({ currentTheme, onChangeTheme }) => (
-  <div className="App-themes">
-    <h6>
-      <span>Select a theme:</span>
-    </h6>
-    <div className="App-themes-list">
-      {Object.keys(availableThemes).map((themeName) => (
-        <label key={themeName}>
-          <input
-            type="radio"
-            name="theme"
-            checked={currentTheme === themeName}
-            value={themeName}
-            onChange={() => onChangeTheme(themeName)}
-          />
-          <Preview themeName={themeName} />
-          {availableThemes[themeName]}
-        </label>
-      ))}
-    </div>
+  <div>
+    
   </div>
 );
 
