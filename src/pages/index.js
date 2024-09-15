@@ -53,6 +53,7 @@ const App = () => {
   };
 
   const onDownload = (e) => {
+    
     e.preventDefault();
     download(canvasRef.current);
   };
