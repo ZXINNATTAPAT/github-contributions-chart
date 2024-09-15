@@ -43,28 +43,18 @@ const App = () => {
       setError("Something went wrong... Check back later.");
       return;
     }
-
     const { drawContributions } = await import("github-contributions-canvas");
 
     drawContributions(canvasRef.current, {
       data,
       username: username,
       themeName: theme,
-      footerText: "Made by @sallar & friends - github-contributions.vercel.app"
-    });
-    contentRef.current.scrollIntoView({
-      behavior: "smooth"
     });
   };
 
   const _renderGraphs = () => {
     return (
-      <div
-        className=""
-        style={{ display: data !== null && !loading ? "block" : "none" }}
-      >
-        {/* <p>Your chart is ready!</p> */}
-
+      <div>
         {data !== null && (
           <>
             <canvas ref={canvasRef} />
@@ -77,9 +67,7 @@ const App = () => {
   return (
     <div>
         <ThemeSelector currentTheme={theme}/>
-        <section  ref={contentRef}>
         {_renderGraphs()}
-        </section>
     </div>
   );
 };
